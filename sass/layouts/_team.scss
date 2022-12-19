@@ -1,0 +1,42 @@
+/*^ Наша команда */
+.team {
+  background-color: var(--gray-bg-color);
+}
+
+.team__title {
+  @extend %title;
+}
+
+.team__list {
+  display: flex;
+}
+
+.team__item {
+  background-color: var(--primary-bg-color);
+  box-shadow: var(--team-shadow-box);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.team__content {
+  padding: 30px 0;
+}
+
+.team__name {
+  margin-bottom: 10px;
+  flex-basis: 270px;
+
+  color: var(--title-text-color);
+  @include font(500, 16px, 1.19, null);
+  text-align: center;
+}
+
+.team__position {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}

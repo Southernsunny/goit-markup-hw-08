@@ -1,0 +1,32 @@
+.site-filter {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+/* кнопки */
+.site-filter__button {
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: none;
+
+  color: var(--title-text-color);
+  background-color: var(--gray-bg-color);
+  font-family: inherit;
+  @include font(500, 16px, 1.62, null);
+  text-align: center;
+  @include transitionX4(color, background-color, box-shadow, filter);
+
+  &:hover,
+  &:focus {
+    color: var(--white-text-color);
+    background-color: var(--accent-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+}
+
+.site-filter__item:not(:last-child) {
+  margin-right: 8px;
+}

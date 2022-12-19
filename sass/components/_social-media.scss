@@ -1,0 +1,36 @@
+.social-media {
+  @include centeredFlex;
+
+  &--dark {
+    justify-content: flex-start;
+  }
+}
+
+.social-media__link {
+  @include centeredFlex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  fill: var(--icons-color);
+  @include transitionX2(fill, background-color);
+
+  &--dark {
+    fill: var(--primary-bg-color);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &:hover,
+  &:focus {
+    fill: var(--primary-bg-color);
+    background-color: var(--accent-text-color);
+  }
+}
+
+.social-media__item {
+  height: 44px;
+  width: 44px;
+  fill: currentColor;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
