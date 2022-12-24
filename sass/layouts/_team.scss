@@ -9,20 +9,30 @@
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
 
 .team__item {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+
   background-color: var(--primary-bg-color);
   box-shadow: var(--team-shadow-box);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include tablet {
+    width: calc((100% - 60px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 120px) / 4);
   }
 }
 
 .team__content {
-  padding: 30px 0;
+  padding: 30px 0 24px;
 }
 
 .team__name {
@@ -30,7 +40,7 @@
   flex-basis: 270px;
 
   color: var(--title-text-color);
-  @include font(500, 16px, 1.19, null);
+  @include font(500, 16px, 1.19, 0.03em);
   text-align: center;
 }
 

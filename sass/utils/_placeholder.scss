@@ -1,7 +1,12 @@
 %title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.17;
+  letter-spacing: 0.03em;
+  @include font(700, 28px, 1.18, 0.03em);
   text-align: center;
+
+  @include desktop {
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.17, 0.03em);
+  }
 }

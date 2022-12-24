@@ -1,7 +1,20 @@
 .site-filter {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  width: 326px;
+  margin-left: -8px;
+  margin-bottom: -15px;
+
+  @include tablet {
+    justify-content: center;
+    font-size: 28px;
+    line-height: 1.18;
+    width: 100%;
+  }
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 /* кнопки */
@@ -13,7 +26,7 @@
   color: var(--title-text-color);
   background-color: var(--gray-bg-color);
   font-family: inherit;
-  @include font(500, 16px, 1.62, null);
+  @include font(500, 16px, 1.62, 0.03em);
   text-align: center;
   @include transitionX4(color, background-color, box-shadow, filter);
 
@@ -27,6 +40,7 @@
   }
 }
 
-.site-filter__item:not(:last-child) {
-  margin-right: 8px;
+.site-filter__item {
+  margin-left: 8px;
+  margin-bottom: 15px;
 }

@@ -2,6 +2,16 @@
 .works-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 40px;
+  margin-left: -30px;
+  margin-bottom: -30px;
+
+  @include tablet {
+    margin-top: 30px;
+  }
+  @include desktop {
+    margin-top: 50px;
+  }
 }
 
 .works-list__content {
@@ -9,22 +19,25 @@
 }
 
 .works-list__item {
-  flex-basis: 370px;
+  flex-basis: 100%;
+  margin-left: 30px;
+  margin-bottom: 30px;
+
   background-color: var(--primary-bg-color);
   border: 1px solid var(--border-works-color);
 
-  &:not(:nth-child(3n + 3)) {
-    margin-right: 30px;
+  @include tablet {
+    flex-basis: calc((100% - 60px) / 2);
   }
-  &:not(:nth-last-child(-n + 3)) {
-    margin-bottom: 30px;
+  @include desktop {
+    flex-basis: calc((100% - 90px) / 3);
   }
 }
 
 .works-list__title {
   margin-bottom: 4px;
   color: var(--title-text-color);
-  @include font(null, 18px, 2, 0.06em);
+  @include font(700, 18px, 2, 0.06em);
 }
 
 .works-list__example {
@@ -52,6 +65,8 @@
 
 .works-list__overlay {
   position: absolute;
+  display: flex;
+  align-items: center;
   @include centeredPosition;
   background-color: rgba(33, 150, 243, 0.9);
 
@@ -65,8 +80,15 @@
 }
 
 .works-list__descript {
-  padding: 63px 24px;
-  font-size: 18px;
-  line-height: 1.56;
+  text-align: start;
+  padding: 77px 24px;
+  @include font(400, 18px, 1.56, 0.03em);
   color: var(--primary-bg-color);
+
+  @include tablet {
+    padding: 49px 24px 77px;
+  }
+  @include desktop {
+    padding: 63px 24px;
+  }
 }

@@ -1,14 +1,25 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  /* outline: 1px solid red; */
+  // outline: 1px solid red;
+  padding: 60px 0;
+
+  @include desktop {
+    padding: 94px 0;
+  }
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  /* outline: 1px solid yellow; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  // outline: 1px solid yellow;
+
+  @include mobile {
+    width: 480px;
+  }
+  @include tablet {
+    width: 768px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
 }
