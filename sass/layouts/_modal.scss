@@ -145,6 +145,7 @@
 
 .modal-form__checkbox-label {
   @include centeredFlex;
+  flex-wrap: wrap;
   @include font(400, 12px, 1.17, 0.03em);
   @include desktop {
     @include font(400, 14px, 1.71, 0.03em);

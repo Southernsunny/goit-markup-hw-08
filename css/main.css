@@ -869,6 +869,8 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
