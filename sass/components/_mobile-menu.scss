@@ -61,13 +61,17 @@
 }
 
 .mobile-nav__link {
-  @include font(500, 40px, 1.18, 0.02em);
+  @include font(500, 34px, 1.18, 0.02em);
   color: var(--title-text-color);
   @include transition(color);
 
   &:hover,
   &:focus {
     color: var(--accent-text-color);
+  }
+
+  @include mobile {
+    @include font(500, 40px, 1.18, 0.02em);
   }
 }
 
@@ -76,8 +80,11 @@
 }
 
 .mobile-contacts__link--tel {
-  @include font(500, 34px, 1.18, 0.02em);
+  @include font(500, 30px, 1.18, 0.02em);
   color: var(--accent-text-color);
+  @include mobile {
+    @include font(500, 34px, 1.18, 0.02em);
+  }
 }
 
 .mobile-contacts__link--mail {
