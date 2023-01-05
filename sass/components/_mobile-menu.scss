@@ -45,6 +45,7 @@
   padding: 48px 40px;
   background-color: var(--primary-bg-color);
   z-index: 999;
+  overflow: auto;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -55,9 +56,7 @@
 }
 
 .mobile-nav__item {
-  &:not(:last-child) {
-    margin-bottom: 32px;
-  }
+  margin-bottom: 32px;
 }
 
 .mobile-nav__link {
