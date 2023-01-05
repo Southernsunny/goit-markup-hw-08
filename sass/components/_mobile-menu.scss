@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  overflow: auto;
 }
 
 .menu-btn {
@@ -45,7 +46,6 @@
   padding: 48px 40px;
   background-color: var(--primary-bg-color);
   z-index: 999;
-  overflow: auto;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
