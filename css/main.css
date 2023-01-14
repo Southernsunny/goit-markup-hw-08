@@ -396,12 +396,13 @@ button {
   bottom: 50px;
   right: 20px;
   font-size: 12px;
-  background: white;
+  background: var(--white-text-color);
   opacity: 0;
   z-index: 2;
   padding: 0;
   border-radius: 50%;
-  border: 1px solid lightskyblue;
+  border: 1px solid var(--accent-text-color);
+  fill: var(--accent-text-color);
   -webkit-transform: translateY(30%);
           transform: translateY(30%);
   -webkit-transition: opacity 1s ease-in-out, -webkit-transform 1s ease-in-out;
